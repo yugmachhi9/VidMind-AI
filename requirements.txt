@@ -1,0 +1,40 @@
+# ── Audio / Video acquisition ────────────────
+yt-dlp>=2024.4.9                  # Download audio from YouTube URLs
+pydub>=0.25.1                     # Audio file manipulation & format conversion
+ffmpeg-python>=0.2.0              # FFmpeg bindings (ffmpeg binary must be installed)
+
+# ── Speech-to-Text (local Whisper) ───────────
+openai-whisper>=20231117          # OpenAI Whisper for local transcription
+torch>=2.2.0                      # Required backend for Whisper
+torchaudio>=2.2.0                 # Audio utilities for Torch
+
+# ── Translation (Hindi → English) ────────────
+deep-translator>=1.11.4           # Lightweight translation (Google Translate backend)
+langdetect>=1.0.9                 # Detect language of transcript segments
+
+# ── LLM / LangChain (Mistral free API) ───────
+langchain>=0.2.0
+langchain-core>=0.2.0
+langchain-community>=0.2.0
+langchain-mistralai>=0.1.0        # LangChain integration for Mistral API
+mistralai>=1.0.0                  # Official Mistral Python client
+
+# ── RAG Pipeline ─────────────────────────────
+chromadb>=0.5.0                   # Vector store for transcript chunks
+sentence-transformers>=2.7.0      # HuggingFace embeddings (e.g. all-MiniLM-L6-v2)
+langchain-huggingface>=0.0.3      # HuggingFace embeddings wrapper for LangChain
+tiktoken>=0.7.0                   # Token counting for text splitters
+
+# ── Streamlit UI ─────────────────────────────
+streamlit>=1.35.0
+streamlit-extras>=0.4.3           # Optional: nicer UI components
+
+# ── PDF / TXT Export ─────────────────────────
+fpdf2>=2.7.9                      # Generate PDF export files
+reportlab>=4.2.0                  # Alternative PDF generation (rich formatting)
+
+# ── Utilities ────────────────────────────────
+python-dotenv>=1.0.1              # Load API keys from .env file
+numpy>=1.26.0
+tqdm>=4.66.0                      # Progress bars for long-running tasks
+requests>=2.32.0
